@@ -1,7 +1,7 @@
 {
   "project_name": "CASSAVISION",
   "version": "1.0.0",
-  "timestamp_utc": "2026-11-06T11:32:50Z",
+  "timestamp_utc": "2026-11-07T18:32:08Z",
   "random_seed": 42,
   "dataset_provenance": {
     "dataset_name": "Makerere / NaCRRI Cassava Leaf Disease Dataset (Kaggle Competition)",
@@ -871,8 +871,8 @@
       "pretrained": false,
       "total_parameters": 0,
       "model_size_mb": 2.4,
-      "training_duration_sec": 16.84,
-      "inference_latency_ms": 1.36,
+      "training_duration_sec": 22.25,
+      "inference_latency_ms": 1.6,
       "val_accuracy": 0.5446,
       "val_macro_f1": 0.2264,
       "val_weighted_f1": 0.4434,
