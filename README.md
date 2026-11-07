@@ -142,7 +142,8 @@ CASSAVISION/
 │   ├── metrics/                          # JSON experiment registry, split reports, test metrics & XAI audit
 │   └── models/                           # Saved PyTorch checkpoints (selected_model.pt, *_best.pt)
 ├── assets/screenshots/                   # Genuine screenshots of the running Streamlit application
-├── .github/workflows/ci.yml              # Automated GitHub Actions CI pipeline
+├── ci/
+│   └── github-actions-ci.yml             # Automated GitHub Actions CI workflow specification
 ├── pyproject.toml                        # Package metadata & pytest configuration
 └── requirements.txt                      # Pinned dependency specification
 ```
