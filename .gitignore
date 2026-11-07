@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Raw and processed image datasets (keep lightweight manifests/splits in git or docs)
+data/raw/images/
+data/processed/
+data/augmented/
+
+# Large model checkpoints (tracked via release artifacts / local paths; metadata JSONs are tracked)
+artifacts/models/*.pt
+artifacts/models/*.pth
+artifacts/models/*.onnx
+
+# Credentials and secrets (NEVER commit)
+.kaggle/
+kaggle.json
+.env
+*.pem
+*.key
+
+# Pytest / coverage / IDE
+.pytest_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+data/raw/remote_file_index.json

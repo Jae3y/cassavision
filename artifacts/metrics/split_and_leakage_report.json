@@ -1,0 +1,62 @@
+{
+  "random_seed": 42,
+  "exact_duplicates_removed": 0,
+  "leakage_verification_passed": true,
+  "zero_image_overlap": true,
+  "zero_md5_overlap": true,
+  "zero_cluster_overlap": true,
+  "splits": {
+    "train": {
+      "total": 525,
+      "by_class_code": {
+        "CBB": 56,
+        "CBSD": 56,
+        "CGM": 59,
+        "CMD": 291,
+        "Healthy": 63
+      },
+      "by_class_index": {
+        "0": 56,
+        "1": 56,
+        "2": 59,
+        "3": 291,
+        "4": 63
+      }
+    },
+    "val": {
+      "total": 112,
+      "by_class_code": {
+        "CBB": 12,
+        "CBSD": 12,
+        "CGM": 13,
+        "CMD": 62,
+        "Healthy": 13
+      },
+      "by_class_index": {
+        "0": 12,
+        "1": 12,
+        "2": 13,
+        "3": 62,
+        "4": 13
+      }
+    },
+    "test": {
+      "total": 113,
+      "by_class_code": {
+        "CBB": 12,
+        "CBSD": 12,
+        "CGM": 12,
+        "CMD": 63,
+        "Healthy": 14
+      },
+      "by_class_index": {
+        "0": 12,
+        "1": 12,
+        "2": 12,
+        "3": 63,
+        "4": 14
+      }
+    }
+  },
+  "duplicate_investigation": {}
+}

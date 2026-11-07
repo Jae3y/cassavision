@@ -1,0 +1,2572 @@
+{
+  "model_name": "custom_cnn",
+  "display_name": "CUSTOM CNN",
+  "architecture": "custom_cnn",
+  "pretrained": false,
+  "weights_origin": "Random Initialization (Kaiming Normal)",
+  "total_parameters": 422437,
+  "model_size_mb": 1.611,
+  "best_epoch": 8,
+  "epochs_completed": 8,
+  "training_duration_sec": 436.45,
+  "inference_latency_ms": 18.91,
+  "temperature": 0.7969,
+  "val_accuracy": 0.6161,
+  "val_macro_f1": 0.3549,
+  "val_weighted_f1": 0.5483,
+  "test_accuracy": 0.646,
+  "test_macro_f1": 0.402,
+  "test_weighted_f1": 0.5889,
+  "test_ece": 0.07,
+  "uncalibrated_test_ece": 0.1095,
+  "checkpoint_path": "artifacts/models/custom_cnn_best.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "phase": "full_finetune",
+      "learning_rate": 0.000962,
+      "train_loss": 1.5672,
+      "train_accuracy": 0.52,
+      "val_loss": 1.5859,
+      "val_accuracy": 0.1696,
+      "val_macro_f1": 0.1402,
+      "val_weighted_f1": 0.1523,
+      "epoch_duration_sec": 55.16
+    },
+    {
+      "epoch": 2,
+      "phase": "full_finetune",
+      "learning_rate": 0.000855,
+      "train_loss": 1.4725,
+      "train_accuracy": 0.4857,
+      "val_loss": 1.4721,
+      "val_accuracy": 0.375,
+      "val_macro_f1": 0.3218,
+      "val_weighted_f1": 0.4133,
+      "epoch_duration_sec": 53.43
+    },
+    {
+      "epoch": 3,
+      "phase": "full_finetune",
+      "learning_rate": 0.000694,
+      "train_loss": 1.4642,
+      "train_accuracy": 0.5581,
+      "val_loss": 1.0795,
+      "val_accuracy": 0.5982,
+      "val_macro_f1": 0.3381,
+      "val_weighted_f1": 0.5225,
+      "epoch_duration_sec": 56.82
+    },
+    {
+      "epoch": 4,
+      "phase": "full_finetune",
+      "learning_rate": 0.000505,
+      "train_loss": 1.3876,
+      "train_accuracy": 0.5733,
+      "val_loss": 1.1638,
+      "val_accuracy": 0.5714,
+      "val_macro_f1": 0.2269,
+      "val_weighted_f1": 0.4477,
+      "epoch_duration_sec": 54.55
+    },
+    {
+      "epoch": 5,
+      "phase": "full_finetune",
+      "learning_rate": 0.000316,
+      "train_loss": 1.3749,
+      "train_accuracy": 0.5733,
+      "val_loss": 1.2704,
+      "val_accuracy": 0.5357,
+      "val_macro_f1": 0.3237,
+      "val_weighted_f1": 0.5122,
+      "epoch_duration_sec": 52.33
+    },
+    {
+      "epoch": 6,
+      "phase": "full_finetune",
+      "learning_rate": 0.000155,
+      "train_loss": 1.3454,
+      "train_accuracy": 0.5867,
+      "val_loss": 1.1479,
+      "val_accuracy": 0.5625,
+      "val_macro_f1": 0.353,
+      "val_weighted_f1": 0.5271,
+      "epoch_duration_sec": 58.58
+    },
+    {
+      "epoch": 7,
+      "phase": "full_finetune",
+      "learning_rate": 4.8e-05,
+      "train_loss": 1.3046,
+      "train_accuracy": 0.621,
+      "val_loss": 1.1046,
+      "val_accuracy": 0.5714,
+      "val_macro_f1": 0.3494,
+      "val_weighted_f1": 0.5312,
+      "epoch_duration_sec": 53.25
+    },
+    {
+      "epoch": 8,
+      "phase": "full_finetune",
+      "learning_rate": 1e-05,
+      "train_loss": 1.3212,
+      "train_accuracy": 0.6057,
+      "val_loss": 1.0551,
+      "val_accuracy": 0.6161,
+      "val_macro_f1": 0.3549,
+      "val_weighted_f1": 0.5483,
+      "epoch_duration_sec": 52.29
+    }
+  ],
+  "val_metrics": {
+    "total_samples": 112,
+    "accuracy": 0.6161,
+    "macro_precision": 0.3598,
+    "macro_recall": 0.3691,
+    "macro_f1": 0.3549,
+    "weighted_precision": 0.5065,
+    "weighted_recall": 0.6161,
+    "weighted_f1": 0.5483,
+    "per_class": {
+      "CBB": {
+        "class_index": 0,
+        "class_code": "CBB",
+        "class_name": "Cassava Bacterial Blight (CBB)",
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 12,
+        "true_positives": 6,
+        "false_positives": 6,
+        "false_negatives": 6,
+        "true_negatives": 94,
+        "false_positive_rate": 0.06,
+        "false_negative_rate": 0.5
+      },
+      "CBSD": {
+        "class_index": 1,
+        "class_code": "CBSD",
+        "class_name": "Cassava Brown Streak Disease (CBSD)",
+        "precision": 0.4,
+        "recall": 0.3333,
+        "f1": 0.3636,
+        "support": 12,
+        "true_positives": 4,
+        "false_positives": 6,
+        "false_negatives": 8,
+        "true_negatives": 94,
+        "false_positive_rate": 0.06,
+        "false_negative_rate": 0.6667
+      },
+      "CGM": {
+        "class_index": 2,
+        "class_code": "CGM",
+        "class_name": "Cassava Green Mottle (CGM)",
+        "precision": 0.2,
+        "recall": 0.0769,
+        "f1": 0.1111,
+        "support": 13,
+        "true_positives": 1,
+        "false_positives": 4,
+        "false_negatives": 12,
+        "true_negatives": 95,
+        "false_positive_rate": 0.0404,
+        "false_negative_rate": 0.9231
+      },
+      "CMD": {
+        "class_index": 3,
+        "class_code": "CMD",
+        "class_name": "Cassava Mosaic Disease (CMD)",
+        "precision": 0.6988,
+        "recall": 0.9355,
+        "f1": 0.8,
+        "support": 62,
+        "true_positives": 58,
+        "false_positives": 25,
+        "false_negatives": 4,
+        "true_negatives": 25,
+        "false_positive_rate": 0.5,
+        "false_negative_rate": 0.0645
+      },
+      "Healthy": {
+        "class_index": 4,
+        "class_code": "Healthy",
+        "class_name": "Healthy",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13,
+        "true_positives": 0,
+        "false_positives": 2,
+        "false_negatives": 13,
+        "true_negatives": 97,
+        "false_positive_rate": 0.0202,
+        "false_negative_rate": 1.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        6,
+        3,
+        0,
+        3,
+        0
+      ],
+      [
+        3,
+        4,
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        9,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        58,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        10,
+        0
+      ]
+    ],
+    "confusion_matrix_normalized": [
+      [
+        0.5,
+        0.25,
+        0.0,
+        0.25,
+        0.0
+      ],
+      [
+        0.25,
+        0.3333,
+        0.0833,
+        0.25,
+        0.0833
+      ],
+      [
+        0.0769,
+        0.1538,
+        0.0769,
+        0.6923,
+        0.0
+      ],
+      [
+        0.0161,
+        0.0,
+        0.0323,
+        0.9355,
+        0.0161
+      ],
+      [
+        0.0769,
+        0.0769,
+        0.0769,
+        0.7692,
+        0.0
+      ]
+    ],
+    "top_confused_pairs": [
+      {
+        "true_class": "Healthy",
+        "predicted_class": "CMD",
+        "count": 10,
+        "rate_within_true_class": 0.7692
+      },
+      {
+        "true_class": "CGM",
+        "predicted_class": "CMD",
+        "count": 9,
+        "rate_within_true_class": 0.6923
+      },
+      {
+        "true_class": "CBB",
+        "predicted_class": "CBSD",
+        "count": 3,
+        "rate_within_true_class": 0.25
+      },
+      {
+        "true_class": "CBB",
+        "predicted_class": "CMD",
+        "count": 3,
+        "rate_within_true_class": 0.25
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "CBB",
+        "count": 3,
+        "rate_within_true_class": 0.25
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "CMD",
+        "count": 3,
+        "rate_within_true_class": 0.25
+      },
+      {
+        "true_class": "CGM",
+        "predicted_class": "CBSD",
+        "count": 2,
+        "rate_within_true_class": 0.1538
+      },
+      {
+        "true_class": "CMD",
+        "predicted_class": "CGM",
+        "count": 2,
+        "rate_within_true_class": 0.0323
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "CGM",
+        "count": 1,
+        "rate_within_true_class": 0.0833
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "Healthy",
+        "count": 1,
+        "rate_within_true_class": 0.0833
+      }
+    ],
+    "ece": 0.092,
+    "reliability_bins": [
+      {
+        "bin_index": 0,
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "count": 0,
+        "mean_confidence": 0.05,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_index": 1,
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "count": 0,
+        "mean_confidence": 0.15,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_index": 2,
+        "bin_lower": 0.2,
+        "bin_upper": 0.3,
+        "count": 3,
+        "mean_confidence": 0.2865,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.2865
+      },
+      {
+        "bin_index": 3,
+        "bin_lower": 0.3,
+        "bin_upper": 0.4,
+        "count": 15,
+        "mean_confidence": 0.3449,
+        "empirical_accuracy": 0.4667,
+        "calibration_gap": 0.1218
+      },
+      {
+        "bin_index": 4,
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "count": 24,
+        "mean_confidence": 0.4399,
+        "empirical_accuracy": 0.5417,
+        "calibration_gap": 0.1018
+      },
+      {
+        "bin_index": 5,
+        "bin_lower": 0.5,
+        "bin_upper": 0.6,
+        "count": 18,
+        "mean_confidence": 0.5549,
+        "empirical_accuracy": 0.3889,
+        "calibration_gap": 0.166
+      },
+      {
+        "bin_index": 6,
+        "bin_lower": 0.6,
+        "bin_upper": 0.7,
+        "count": 16,
+        "mean_confidence": 0.652,
+        "empirical_accuracy": 0.625,
+        "calibration_gap": 0.027
+      },
+      {
+        "bin_index": 7,
+        "bin_lower": 0.7,
+        "bin_upper": 0.8,
+        "count": 12,
+        "mean_confidence": 0.7508,
+        "empirical_accuracy": 0.75,
+        "calibration_gap": 0.0008
+      },
+      {
+        "bin_index": 8,
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "count": 12,
+        "mean_confidence": 0.8391,
+        "empirical_accuracy": 0.9167,
+        "calibration_gap": 0.0776
+      },
+      {
+        "bin_index": 9,
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "count": 12,
+        "mean_confidence": 0.9319,
+        "empirical_accuracy": 1.0,
+        "calibration_gap": 0.0681
+      }
+    ],
+    "mean_confidence_overall": 0.6006,
+    "mean_confidence_correct": 0.6644,
+    "mean_confidence_incorrect": 0.4983
+  },
+  "test_metrics": {
+    "total_samples": 113,
+    "accuracy": 0.646,
+    "macro_precision": 0.4374,
+    "macro_recall": 0.4048,
+    "macro_f1": 0.402,
+    "weighted_precision": 0.5669,
+    "weighted_recall": 0.646,
+    "weighted_f1": 0.5889,
+    "per_class": {
+      "CBB": {
+        "class_index": 0,
+        "class_code": "CBB",
+        "class_name": "Cassava Bacterial Blight (CBB)",
+        "precision": 0.5385,
+        "recall": 0.5833,
+        "f1": 0.56,
+        "support": 12,
+        "true_positives": 7,
+        "false_positives": 6,
+        "false_negatives": 5,
+        "true_negatives": 95,
+        "false_positive_rate": 0.0594,
+        "false_negative_rate": 0.4167
+      },
+      "CBSD": {
+        "class_index": 1,
+        "class_code": "CBSD",
+        "class_name": "Cassava Brown Streak Disease (CBSD)",
+        "precision": 0.5,
+        "recall": 0.3333,
+        "f1": 0.4,
+        "support": 12,
+        "true_positives": 4,
+        "false_positives": 4,
+        "false_negatives": 8,
+        "true_negatives": 97,
+        "false_positive_rate": 0.0396,
+        "false_negative_rate": 0.6667
+      },
+      "CGM": {
+        "class_index": 2,
+        "class_code": "CGM",
+        "class_name": "Cassava Green Mottle (CGM)",
+        "precision": 0.1667,
+        "recall": 0.0833,
+        "f1": 0.1111,
+        "support": 12,
+        "true_positives": 1,
+        "false_positives": 5,
+        "false_negatives": 11,
+        "true_negatives": 96,
+        "false_positive_rate": 0.0495,
+        "false_negative_rate": 0.9167
+      },
+      "CMD": {
+        "class_index": 3,
+        "class_code": "CMD",
+        "class_name": "Cassava Mosaic Disease (CMD)",
+        "precision": 0.7317,
+        "recall": 0.9524,
+        "f1": 0.8276,
+        "support": 63,
+        "true_positives": 60,
+        "false_positives": 22,
+        "false_negatives": 3,
+        "true_negatives": 28,
+        "false_positive_rate": 0.44,
+        "false_negative_rate": 0.0476
+      },
+      "Healthy": {
+        "class_index": 4,
+        "class_code": "Healthy",
+        "class_name": "Healthy",
+        "precision": 0.25,
+        "recall": 0.0714,
+        "f1": 0.1111,
+        "support": 14,
+        "true_positives": 1,
+        "false_positives": 3,
+        "false_negatives": 13,
+        "true_negatives": 96,
+        "false_positive_rate": 0.0303,
+        "false_negative_rate": 0.9286
+      }
+    },
+    "confusion_matrix": [
+      [
+        7,
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        4,
+        1,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        11,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        60,
+        2
+      ],
+      [
+        3,
+        2,
+        4,
+        4,
+        1
+      ]
+    ],
+    "confusion_matrix_normalized": [
+      [
+        0.5833,
+        0.1667,
+        0.0,
+        0.1667,
+        0.0833
+      ],
+      [
+        0.1667,
+        0.3333,
+        0.0833,
+        0.4167,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0833,
+        0.9167,
+        0.0
+      ],
+      [
+        0.0159,
+        0.0,
+        0.0,
+        0.9524,
+        0.0317
+      ],
+      [
+        0.2143,
+        0.1429,
+        0.2857,
+        0.2857,
+        0.0714
+      ]
+    ],
+    "top_confused_pairs": [
+      {
+        "true_class": "CGM",
+        "predicted_class": "CMD",
+        "count": 11,
+        "rate_within_true_class": 0.9167
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "CMD",
+        "count": 5,
+        "rate_within_true_class": 0.4167
+      },
+      {
+        "true_class": "Healthy",
+        "predicted_class": "CGM",
+        "count": 4,
+        "rate_within_true_class": 0.2857
+      },
+      {
+        "true_class": "Healthy",
+        "predicted_class": "CMD",
+        "count": 4,
+        "rate_within_true_class": 0.2857
+      },
+      {
+        "true_class": "Healthy",
+        "predicted_class": "CBB",
+        "count": 3,
+        "rate_within_true_class": 0.2143
+      },
+      {
+        "true_class": "CBB",
+        "predicted_class": "CBSD",
+        "count": 2,
+        "rate_within_true_class": 0.1667
+      },
+      {
+        "true_class": "CBB",
+        "predicted_class": "CMD",
+        "count": 2,
+        "rate_within_true_class": 0.1667
+      },
+      {
+        "true_class": "CBSD",
+        "predicted_class": "CBB",
+        "count": 2,
+        "rate_within_true_class": 0.1667
+      },
+      {
+        "true_class": "CMD",
+        "predicted_class": "Healthy",
+        "count": 2,
+        "rate_within_true_class": 0.0317
+      },
+      {
+        "true_class": "Healthy",
+        "predicted_class": "CBSD",
+        "count": 2,
+        "rate_within_true_class": 0.1429
+      }
+    ],
+    "ece": 0.07,
+    "reliability_bins": [
+      {
+        "bin_index": 0,
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "count": 0,
+        "mean_confidence": 0.05,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_index": 1,
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "count": 0,
+        "mean_confidence": 0.15,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_index": 2,
+        "bin_lower": 0.2,
+        "bin_upper": 0.3,
+        "count": 5,
+        "mean_confidence": 0.2757,
+        "empirical_accuracy": 0.6,
+        "calibration_gap": 0.3243
+      },
+      {
+        "bin_index": 3,
+        "bin_lower": 0.3,
+        "bin_upper": 0.4,
+        "count": 21,
+        "mean_confidence": 0.3596,
+        "empirical_accuracy": 0.3333,
+        "calibration_gap": 0.0263
+      },
+      {
+        "bin_index": 4,
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "count": 17,
+        "mean_confidence": 0.4513,
+        "empirical_accuracy": 0.5882,
+        "calibration_gap": 0.1369
+      },
+      {
+        "bin_index": 5,
+        "bin_lower": 0.5,
+        "bin_upper": 0.6,
+        "count": 16,
+        "mean_confidence": 0.5514,
+        "empirical_accuracy": 0.5625,
+        "calibration_gap": 0.0111
+      },
+      {
+        "bin_index": 6,
+        "bin_lower": 0.6,
+        "bin_upper": 0.7,
+        "count": 16,
+        "mean_confidence": 0.6441,
+        "empirical_accuracy": 0.6875,
+        "calibration_gap": 0.0434
+      },
+      {
+        "bin_index": 7,
+        "bin_lower": 0.7,
+        "bin_upper": 0.8,
+        "count": 13,
+        "mean_confidence": 0.7399,
+        "empirical_accuracy": 0.6923,
+        "calibration_gap": 0.0476
+      },
+      {
+        "bin_index": 8,
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "count": 13,
+        "mean_confidence": 0.8679,
+        "empirical_accuracy": 1.0,
+        "calibration_gap": 0.1321
+      },
+      {
+        "bin_index": 9,
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "count": 12,
+        "mean_confidence": 0.9333,
+        "empirical_accuracy": 0.9167,
+        "calibration_gap": 0.0166
+      }
+    ],
+    "mean_confidence_overall": 0.6003,
+    "mean_confidence_correct": 0.6631,
+    "mean_confidence_incorrect": 0.4857,
+    "uncalibrated_ece": 0.1095,
+    "temperature_T": 0.7969,
+    "test_loss": 1.0669
+  },
+  "test_predictions": [
+    {
+      "image_id": "1032082353.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 4,
+      "pred_code": "Healthy",
+      "is_correct": false,
+      "confidence": 0.3355,
+      "probabilities": {
+        "CBB": 0.214,
+        "CBSD": 0.2912,
+        "CGM": 0.0538,
+        "CMD": 0.1055,
+        "Healthy": 0.3355
+      }
+    },
+    {
+      "image_id": "1074461567.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.3667,
+      "probabilities": {
+        "CBB": 0.0629,
+        "CBSD": 0.1154,
+        "CGM": 0.3348,
+        "CMD": 0.3667,
+        "Healthy": 0.1203
+      }
+    },
+    {
+      "image_id": "1118350826.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.5199,
+      "probabilities": {
+        "CBB": 0.1032,
+        "CBSD": 0.052,
+        "CGM": 0.1414,
+        "CMD": 0.5199,
+        "Healthy": 0.1834
+      }
+    },
+    {
+      "image_id": "114198015.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.3651,
+      "probabilities": {
+        "CBB": 0.206,
+        "CBSD": 0.0868,
+        "CGM": 0.1083,
+        "CMD": 0.3651,
+        "Healthy": 0.2338
+      }
+    },
+    {
+      "image_id": "1151214071.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9256,
+      "probabilities": {
+        "CBB": 0.0027,
+        "CBSD": 0.0179,
+        "CGM": 0.0243,
+        "CMD": 0.9256,
+        "Healthy": 0.0295
+      }
+    },
+    {
+      "image_id": "1179452457.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8919,
+      "probabilities": {
+        "CBB": 0.0104,
+        "CBSD": 0.002,
+        "CGM": 0.0471,
+        "CMD": 0.8919,
+        "Healthy": 0.0486
+      }
+    },
+    {
+      "image_id": "1287334854.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.3794,
+      "probabilities": {
+        "CBB": 0.2427,
+        "CBSD": 0.0951,
+        "CGM": 0.0962,
+        "CMD": 0.3794,
+        "Healthy": 0.1867
+      }
+    },
+    {
+      "image_id": "1320006527.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8712,
+      "probabilities": {
+        "CBB": 0.0039,
+        "CBSD": 0.0085,
+        "CGM": 0.0964,
+        "CMD": 0.8712,
+        "Healthy": 0.02
+      }
+    },
+    {
+      "image_id": "1333419699.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7029,
+      "probabilities": {
+        "CBB": 0.0407,
+        "CBSD": 0.0141,
+        "CGM": 0.1526,
+        "CMD": 0.7029,
+        "Healthy": 0.0898
+      }
+    },
+    {
+      "image_id": "1359969815.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.3213,
+      "probabilities": {
+        "CBB": 0.1707,
+        "CBSD": 0.0569,
+        "CGM": 0.2549,
+        "CMD": 0.3213,
+        "Healthy": 0.1963
+      }
+    },
+    {
+      "image_id": "1370558109.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6622,
+      "probabilities": {
+        "CBB": 0.0617,
+        "CBSD": 0.0599,
+        "CGM": 0.0843,
+        "CMD": 0.6622,
+        "Healthy": 0.1318
+      }
+    },
+    {
+      "image_id": "1387999254.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8048,
+      "probabilities": {
+        "CBB": 0.0145,
+        "CBSD": 0.0143,
+        "CGM": 0.1115,
+        "CMD": 0.8048,
+        "Healthy": 0.055
+      }
+    },
+    {
+      "image_id": "1403274115.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.3214,
+      "probabilities": {
+        "CBB": 0.3214,
+        "CBSD": 0.1428,
+        "CGM": 0.0878,
+        "CMD": 0.1808,
+        "Healthy": 0.2671
+      }
+    },
+    {
+      "image_id": "1425209102.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9195,
+      "probabilities": {
+        "CBB": 0.0041,
+        "CBSD": 0.0022,
+        "CGM": 0.0504,
+        "CMD": 0.9195,
+        "Healthy": 0.0237
+      }
+    },
+    {
+      "image_id": "1433079784.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.6168,
+      "probabilities": {
+        "CBB": 0.0973,
+        "CBSD": 0.0479,
+        "CGM": 0.1109,
+        "CMD": 0.6168,
+        "Healthy": 0.1271
+      }
+    },
+    {
+      "image_id": "1492704954.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": false,
+      "confidence": 0.5314,
+      "probabilities": {
+        "CBB": 0.0483,
+        "CBSD": 0.5314,
+        "CGM": 0.0393,
+        "CMD": 0.2713,
+        "Healthy": 0.1097
+      }
+    },
+    {
+      "image_id": "1722126168.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.3724,
+      "probabilities": {
+        "CBB": 0.3724,
+        "CBSD": 0.0906,
+        "CGM": 0.1115,
+        "CMD": 0.2148,
+        "Healthy": 0.2108
+      }
+    },
+    {
+      "image_id": "1769894805.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.5469,
+      "probabilities": {
+        "CBB": 0.0872,
+        "CBSD": 0.0643,
+        "CGM": 0.193,
+        "CMD": 0.5469,
+        "Healthy": 0.1085
+      }
+    },
+    {
+      "image_id": "1823518467.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.6856,
+      "probabilities": {
+        "CBB": 0.6856,
+        "CBSD": 0.1629,
+        "CGM": 0.0147,
+        "CMD": 0.0104,
+        "Healthy": 0.1264
+      }
+    },
+    {
+      "image_id": "1834483972.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": false,
+      "confidence": 0.4567,
+      "probabilities": {
+        "CBB": 0.0334,
+        "CBSD": 0.1151,
+        "CGM": 0.4567,
+        "CMD": 0.2729,
+        "Healthy": 0.1219
+      }
+    },
+    {
+      "image_id": "1877332484.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.5604,
+      "probabilities": {
+        "CBB": 0.5604,
+        "CBSD": 0.1709,
+        "CGM": 0.0395,
+        "CMD": 0.0437,
+        "Healthy": 0.1856
+      }
+    },
+    {
+      "image_id": "1882080819.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9334,
+      "probabilities": {
+        "CBB": 0.0013,
+        "CBSD": 0.0036,
+        "CGM": 0.0499,
+        "CMD": 0.9334,
+        "Healthy": 0.0118
+      }
+    },
+    {
+      "image_id": "1896468303.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.6136,
+      "probabilities": {
+        "CBB": 0.1074,
+        "CBSD": 0.0112,
+        "CGM": 0.1274,
+        "CMD": 0.6136,
+        "Healthy": 0.1405
+      }
+    },
+    {
+      "image_id": "2000281372.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7546,
+      "probabilities": {
+        "CBB": 0.0285,
+        "CBSD": 0.0238,
+        "CGM": 0.0823,
+        "CMD": 0.7546,
+        "Healthy": 0.1108
+      }
+    },
+    {
+      "image_id": "2005247448.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9049,
+      "probabilities": {
+        "CBB": 0.0027,
+        "CBSD": 0.0069,
+        "CGM": 0.0706,
+        "CMD": 0.9049,
+        "Healthy": 0.0148
+      }
+    },
+    {
+      "image_id": "201171062.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6463,
+      "probabilities": {
+        "CBB": 0.035,
+        "CBSD": 0.0484,
+        "CGM": 0.19,
+        "CMD": 0.6463,
+        "Healthy": 0.0803
+      }
+    },
+    {
+      "image_id": "210771283.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.7286,
+      "probabilities": {
+        "CBB": 0.0333,
+        "CBSD": 0.0191,
+        "CGM": 0.143,
+        "CMD": 0.7286,
+        "Healthy": 0.0759
+      }
+    },
+    {
+      "image_id": "2123562479.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8623,
+      "probabilities": {
+        "CBB": 0.0057,
+        "CBSD": 0.0277,
+        "CGM": 0.0723,
+        "CMD": 0.8623,
+        "Healthy": 0.0319
+      }
+    },
+    {
+      "image_id": "2139679147.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": true,
+      "confidence": 0.4567,
+      "probabilities": {
+        "CBB": 0.0297,
+        "CBSD": 0.0953,
+        "CGM": 0.4567,
+        "CMD": 0.3172,
+        "Healthy": 0.1012
+      }
+    },
+    {
+      "image_id": "2174425139.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.898,
+      "probabilities": {
+        "CBB": 0.0061,
+        "CBSD": 0.0207,
+        "CGM": 0.0415,
+        "CMD": 0.898,
+        "Healthy": 0.0337
+      }
+    },
+    {
+      "image_id": "2177911442.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.2758,
+      "probabilities": {
+        "CBB": 0.1674,
+        "CBSD": 0.1416,
+        "CGM": 0.16,
+        "CMD": 0.2758,
+        "Healthy": 0.2552
+      }
+    },
+    {
+      "image_id": "2213112972.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7208,
+      "probabilities": {
+        "CBB": 0.0331,
+        "CBSD": 0.0469,
+        "CGM": 0.0802,
+        "CMD": 0.7208,
+        "Healthy": 0.119
+      }
+    },
+    {
+      "image_id": "2283452558.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": false,
+      "confidence": 0.3379,
+      "probabilities": {
+        "CBB": 0.0624,
+        "CBSD": 0.1939,
+        "CGM": 0.3379,
+        "CMD": 0.2301,
+        "Healthy": 0.1758
+      }
+    },
+    {
+      "image_id": "2382758285.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.373,
+      "probabilities": {
+        "CBB": 0.1163,
+        "CBSD": 0.0559,
+        "CGM": 0.3297,
+        "CMD": 0.373,
+        "Healthy": 0.1251
+      }
+    },
+    {
+      "image_id": "2397594193.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.551,
+      "probabilities": {
+        "CBB": 0.0447,
+        "CBSD": 0.0671,
+        "CGM": 0.2516,
+        "CMD": 0.551,
+        "Healthy": 0.0856
+      }
+    },
+    {
+      "image_id": "2401066705.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6151,
+      "probabilities": {
+        "CBB": 0.0218,
+        "CBSD": 0.0543,
+        "CGM": 0.2446,
+        "CMD": 0.6151,
+        "Healthy": 0.0642
+      }
+    },
+    {
+      "image_id": "244407780.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.4851,
+      "probabilities": {
+        "CBB": 0.4851,
+        "CBSD": 0.3003,
+        "CGM": 0.0348,
+        "CMD": 0.0308,
+        "Healthy": 0.149
+      }
+    },
+    {
+      "image_id": "2446390105.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8603,
+      "probabilities": {
+        "CBB": 0.0085,
+        "CBSD": 0.0029,
+        "CGM": 0.1,
+        "CMD": 0.8603,
+        "Healthy": 0.0283
+      }
+    },
+    {
+      "image_id": "2483045169.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.7152,
+      "probabilities": {
+        "CBB": 0.0094,
+        "CBSD": 0.0168,
+        "CGM": 0.2308,
+        "CMD": 0.7152,
+        "Healthy": 0.0279
+      }
+    },
+    {
+      "image_id": "248804719.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": false,
+      "confidence": 0.408,
+      "probabilities": {
+        "CBB": 0.0807,
+        "CBSD": 0.0594,
+        "CGM": 0.408,
+        "CMD": 0.322,
+        "Healthy": 0.1299
+      }
+    },
+    {
+      "image_id": "2488494933.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.4616,
+      "probabilities": {
+        "CBB": 0.1438,
+        "CBSD": 0.05,
+        "CGM": 0.1675,
+        "CMD": 0.4616,
+        "Healthy": 0.1771
+      }
+    },
+    {
+      "image_id": "2506348944.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": false,
+      "confidence": 0.4702,
+      "probabilities": {
+        "CBB": 0.0391,
+        "CBSD": 0.0485,
+        "CGM": 0.4702,
+        "CMD": 0.3521,
+        "Healthy": 0.0902
+      }
+    },
+    {
+      "image_id": "2523259932.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8838,
+      "probabilities": {
+        "CBB": 0.009,
+        "CBSD": 0.0049,
+        "CGM": 0.0604,
+        "CMD": 0.8838,
+        "Healthy": 0.0419
+      }
+    },
+    {
+      "image_id": "2524433786.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": false,
+      "confidence": 0.3982,
+      "probabilities": {
+        "CBB": 0.1331,
+        "CBSD": 0.3982,
+        "CGM": 0.089,
+        "CMD": 0.2133,
+        "Healthy": 0.1663
+      }
+    },
+    {
+      "image_id": "2547206016.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": true,
+      "confidence": 0.3971,
+      "probabilities": {
+        "CBB": 0.1613,
+        "CBSD": 0.3971,
+        "CGM": 0.068,
+        "CMD": 0.1632,
+        "Healthy": 0.2104
+      }
+    },
+    {
+      "image_id": "2571739382.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5743,
+      "probabilities": {
+        "CBB": 0.0499,
+        "CBSD": 0.0279,
+        "CGM": 0.272,
+        "CMD": 0.5743,
+        "Healthy": 0.0758
+      }
+    },
+    {
+      "image_id": "2659265993.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7435,
+      "probabilities": {
+        "CBB": 0.0161,
+        "CBSD": 0.0123,
+        "CGM": 0.1872,
+        "CMD": 0.7435,
+        "Healthy": 0.0409
+      }
+    },
+    {
+      "image_id": "2704684004.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": true,
+      "confidence": 0.4562,
+      "probabilities": {
+        "CBB": 0.0907,
+        "CBSD": 0.4562,
+        "CGM": 0.1206,
+        "CMD": 0.1555,
+        "Healthy": 0.1769
+      }
+    },
+    {
+      "image_id": "2722971247.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.3856,
+      "probabilities": {
+        "CBB": 0.1151,
+        "CBSD": 0.1606,
+        "CGM": 0.1523,
+        "CMD": 0.3856,
+        "Healthy": 0.1864
+      }
+    },
+    {
+      "image_id": "2765109909.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.2641,
+      "probabilities": {
+        "CBB": 0.2641,
+        "CBSD": 0.124,
+        "CGM": 0.2059,
+        "CMD": 0.2519,
+        "Healthy": 0.1542
+      }
+    },
+    {
+      "image_id": "2782942352.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 4,
+      "pred_code": "Healthy",
+      "is_correct": true,
+      "confidence": 0.2946,
+      "probabilities": {
+        "CBB": 0.1745,
+        "CBSD": 0.2104,
+        "CGM": 0.1555,
+        "CMD": 0.165,
+        "Healthy": 0.2946
+      }
+    },
+    {
+      "image_id": "2887362636.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9444,
+      "probabilities": {
+        "CBB": 0.0019,
+        "CBSD": 0.0042,
+        "CGM": 0.0245,
+        "CMD": 0.9444,
+        "Healthy": 0.025
+      }
+    },
+    {
+      "image_id": "2895545920.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6725,
+      "probabilities": {
+        "CBB": 0.0448,
+        "CBSD": 0.0294,
+        "CGM": 0.1513,
+        "CMD": 0.6725,
+        "Healthy": 0.102
+      }
+    },
+    {
+      "image_id": "2917486619.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6388,
+      "probabilities": {
+        "CBB": 0.0435,
+        "CBSD": 0.0434,
+        "CGM": 0.1815,
+        "CMD": 0.6388,
+        "Healthy": 0.0928
+      }
+    },
+    {
+      "image_id": "292549170.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5502,
+      "probabilities": {
+        "CBB": 0.0396,
+        "CBSD": 0.1461,
+        "CGM": 0.1376,
+        "CMD": 0.5502,
+        "Healthy": 0.1265
+      }
+    },
+    {
+      "image_id": "2928426348.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.4115,
+      "probabilities": {
+        "CBB": 0.1555,
+        "CBSD": 0.0659,
+        "CGM": 0.1284,
+        "CMD": 0.4115,
+        "Healthy": 0.2387
+      }
+    },
+    {
+      "image_id": "3031315498.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.437,
+      "probabilities": {
+        "CBB": 0.0162,
+        "CBSD": 0.0607,
+        "CGM": 0.4268,
+        "CMD": 0.437,
+        "Healthy": 0.0593
+      }
+    },
+    {
+      "image_id": "3152994734.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.649,
+      "probabilities": {
+        "CBB": 0.0083,
+        "CBSD": 0.0154,
+        "CGM": 0.3024,
+        "CMD": 0.649,
+        "Healthy": 0.0249
+      }
+    },
+    {
+      "image_id": "3188367087.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.5044,
+      "probabilities": {
+        "CBB": 0.5044,
+        "CBSD": 0.2795,
+        "CGM": 0.0655,
+        "CMD": 0.0491,
+        "Healthy": 0.1016
+      }
+    },
+    {
+      "image_id": "3201556287.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.2736,
+      "probabilities": {
+        "CBB": 0.2075,
+        "CBSD": 0.2678,
+        "CGM": 0.115,
+        "CMD": 0.2736,
+        "Healthy": 0.136
+      }
+    },
+    {
+      "image_id": "3238704279.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.7398,
+      "probabilities": {
+        "CBB": 0.0357,
+        "CBSD": 0.0126,
+        "CGM": 0.1253,
+        "CMD": 0.7398,
+        "Healthy": 0.0866
+      }
+    },
+    {
+      "image_id": "3260085272.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.756,
+      "probabilities": {
+        "CBB": 0.0413,
+        "CBSD": 0.01,
+        "CGM": 0.0927,
+        "CMD": 0.756,
+        "Healthy": 0.0999
+      }
+    },
+    {
+      "image_id": "3318816619.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": false,
+      "confidence": 0.2706,
+      "probabilities": {
+        "CBB": 0.0823,
+        "CBSD": 0.2706,
+        "CGM": 0.1489,
+        "CMD": 0.2626,
+        "Healthy": 0.2355
+      }
+    },
+    {
+      "image_id": "3329640569.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.4074,
+      "probabilities": {
+        "CBB": 0.0736,
+        "CBSD": 0.2402,
+        "CGM": 0.0843,
+        "CMD": 0.4074,
+        "Healthy": 0.1946
+      }
+    },
+    {
+      "image_id": "3380920477.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.747,
+      "probabilities": {
+        "CBB": 0.0106,
+        "CBSD": 0.0124,
+        "CGM": 0.2042,
+        "CMD": 0.747,
+        "Healthy": 0.0258
+      }
+    },
+    {
+      "image_id": "3421109276.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9083,
+      "probabilities": {
+        "CBB": 0.0078,
+        "CBSD": 0.0094,
+        "CGM": 0.0361,
+        "CMD": 0.9083,
+        "Healthy": 0.0384
+      }
+    },
+    {
+      "image_id": "3441914965.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.602,
+      "probabilities": {
+        "CBB": 0.0515,
+        "CBSD": 0.0365,
+        "CGM": 0.2226,
+        "CMD": 0.602,
+        "Healthy": 0.0873
+      }
+    },
+    {
+      "image_id": "3467700084.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9494,
+      "probabilities": {
+        "CBB": 0.0019,
+        "CBSD": 0.0032,
+        "CGM": 0.0251,
+        "CMD": 0.9494,
+        "Healthy": 0.0204
+      }
+    },
+    {
+      "image_id": "3541075880.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8763,
+      "probabilities": {
+        "CBB": 0.0141,
+        "CBSD": 0.0029,
+        "CGM": 0.0489,
+        "CMD": 0.8763,
+        "Healthy": 0.0578
+      }
+    },
+    {
+      "image_id": "3541514279.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8295,
+      "probabilities": {
+        "CBB": 0.0076,
+        "CBSD": 0.0167,
+        "CGM": 0.1164,
+        "CMD": 0.8295,
+        "Healthy": 0.0299
+      }
+    },
+    {
+      "image_id": "3643032888.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 4,
+      "pred_code": "Healthy",
+      "is_correct": false,
+      "confidence": 0.3538,
+      "probabilities": {
+        "CBB": 0.3031,
+        "CBSD": 0.202,
+        "CGM": 0.0525,
+        "CMD": 0.0887,
+        "Healthy": 0.3538
+      }
+    },
+    {
+      "image_id": "3660043858.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.305,
+      "probabilities": {
+        "CBB": 0.305,
+        "CBSD": 0.2388,
+        "CGM": 0.1309,
+        "CMD": 0.1486,
+        "Healthy": 0.1767
+      }
+    },
+    {
+      "image_id": "3722626623.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.9291,
+      "probabilities": {
+        "CBB": 0.0016,
+        "CBSD": 0.004,
+        "CGM": 0.0557,
+        "CMD": 0.9291,
+        "Healthy": 0.0095
+      }
+    },
+    {
+      "image_id": "3745339060.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8972,
+      "probabilities": {
+        "CBB": 0.0053,
+        "CBSD": 0.0359,
+        "CGM": 0.0233,
+        "CMD": 0.8972,
+        "Healthy": 0.0383
+      }
+    },
+    {
+      "image_id": "3753582415.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5801,
+      "probabilities": {
+        "CBB": 0.0403,
+        "CBSD": 0.0393,
+        "CGM": 0.2705,
+        "CMD": 0.5801,
+        "Healthy": 0.0698
+      }
+    },
+    {
+      "image_id": "3785545560.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9146,
+      "probabilities": {
+        "CBB": 0.0052,
+        "CBSD": 0.0058,
+        "CGM": 0.0346,
+        "CMD": 0.9146,
+        "Healthy": 0.0399
+      }
+    },
+    {
+      "image_id": "3811423890.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.3903,
+      "probabilities": {
+        "CBB": 0.3903,
+        "CBSD": 0.366,
+        "CGM": 0.0541,
+        "CMD": 0.0528,
+        "Healthy": 0.1369
+      }
+    },
+    {
+      "image_id": "3823764652.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 2,
+      "pred_code": "CGM",
+      "is_correct": false,
+      "confidence": 0.378,
+      "probabilities": {
+        "CBB": 0.098,
+        "CBSD": 0.0671,
+        "CGM": 0.378,
+        "CMD": 0.2854,
+        "Healthy": 0.1716
+      }
+    },
+    {
+      "image_id": "3850139583.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.4672,
+      "probabilities": {
+        "CBB": 0.4672,
+        "CBSD": 0.1318,
+        "CGM": 0.0447,
+        "CMD": 0.0806,
+        "Healthy": 0.2758
+      }
+    },
+    {
+      "image_id": "3921494709.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": true,
+      "confidence": 0.5649,
+      "probabilities": {
+        "CBB": 0.2069,
+        "CBSD": 0.5649,
+        "CGM": 0.0357,
+        "CMD": 0.0776,
+        "Healthy": 0.1149
+      }
+    },
+    {
+      "image_id": "3924666081.jpg",
+      "true_label": 4,
+      "true_code": "Healthy",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.5381,
+      "probabilities": {
+        "CBB": 0.0833,
+        "CBSD": 0.0714,
+        "CGM": 0.1369,
+        "CMD": 0.5381,
+        "Healthy": 0.1703
+      }
+    },
+    {
+      "image_id": "3936119100.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": true,
+      "confidence": 0.6131,
+      "probabilities": {
+        "CBB": 0.1546,
+        "CBSD": 0.6131,
+        "CGM": 0.0547,
+        "CMD": 0.0553,
+        "Healthy": 0.1224
+      }
+    },
+    {
+      "image_id": "3979670694.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9794,
+      "probabilities": {
+        "CBB": 0.0006,
+        "CBSD": 0.0007,
+        "CGM": 0.0104,
+        "CMD": 0.9794,
+        "Healthy": 0.0089
+      }
+    },
+    {
+      "image_id": "3988179260.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.744,
+      "probabilities": {
+        "CBB": 0.0118,
+        "CBSD": 0.0323,
+        "CGM": 0.1689,
+        "CMD": 0.744,
+        "Healthy": 0.043
+      }
+    },
+    {
+      "image_id": "4024425381.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6636,
+      "probabilities": {
+        "CBB": 0.0213,
+        "CBSD": 0.0557,
+        "CGM": 0.1877,
+        "CMD": 0.6636,
+        "Healthy": 0.0717
+      }
+    },
+    {
+      "image_id": "4075412353.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.6644,
+      "probabilities": {
+        "CBB": 0.0586,
+        "CBSD": 0.0151,
+        "CGM": 0.1626,
+        "CMD": 0.6644,
+        "Healthy": 0.0994
+      }
+    },
+    {
+      "image_id": "4185096944.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8867,
+      "probabilities": {
+        "CBB": 0.0061,
+        "CBSD": 0.0028,
+        "CGM": 0.0801,
+        "CMD": 0.8867,
+        "Healthy": 0.0243
+      }
+    },
+    {
+      "image_id": "4192717491.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6627,
+      "probabilities": {
+        "CBB": 0.066,
+        "CBSD": 0.0179,
+        "CGM": 0.158,
+        "CMD": 0.6627,
+        "Healthy": 0.0954
+      }
+    },
+    {
+      "image_id": "4226051437.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.4369,
+      "probabilities": {
+        "CBB": 0.1212,
+        "CBSD": 0.0789,
+        "CGM": 0.215,
+        "CMD": 0.4369,
+        "Healthy": 0.1479
+      }
+    },
+    {
+      "image_id": "424691365.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.374,
+      "probabilities": {
+        "CBB": 0.0357,
+        "CBSD": 0.1213,
+        "CGM": 0.3523,
+        "CMD": 0.374,
+        "Healthy": 0.1168
+      }
+    },
+    {
+      "image_id": "4274006379.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5389,
+      "probabilities": {
+        "CBB": 0.1147,
+        "CBSD": 0.0247,
+        "CGM": 0.1307,
+        "CMD": 0.5389,
+        "Healthy": 0.191
+      }
+    },
+    {
+      "image_id": "441408374.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.6303,
+      "probabilities": {
+        "CBB": 0.075,
+        "CBSD": 0.0144,
+        "CGM": 0.1472,
+        "CMD": 0.6303,
+        "Healthy": 0.1332
+      }
+    },
+    {
+      "image_id": "442164564.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 1,
+      "pred_code": "CBSD",
+      "is_correct": false,
+      "confidence": 0.3801,
+      "probabilities": {
+        "CBB": 0.1741,
+        "CBSD": 0.3801,
+        "CGM": 0.0808,
+        "CMD": 0.085,
+        "Healthy": 0.28
+      }
+    },
+    {
+      "image_id": "472269630.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9125,
+      "probabilities": {
+        "CBB": 0.0026,
+        "CBSD": 0.008,
+        "CGM": 0.0624,
+        "CMD": 0.9125,
+        "Healthy": 0.0144
+      }
+    },
+    {
+      "image_id": "553294224.jpg",
+      "true_label": 0,
+      "true_code": "CBB",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": true,
+      "confidence": 0.5563,
+      "probabilities": {
+        "CBB": 0.5563,
+        "CBSD": 0.1054,
+        "CGM": 0.0401,
+        "CMD": 0.0654,
+        "Healthy": 0.2329
+      }
+    },
+    {
+      "image_id": "594027454.jpg",
+      "true_label": 1,
+      "true_code": "CBSD",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.3755,
+      "probabilities": {
+        "CBB": 0.3755,
+        "CBSD": 0.2831,
+        "CGM": 0.0403,
+        "CMD": 0.0501,
+        "Healthy": 0.251
+      }
+    },
+    {
+      "image_id": "6103.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8288,
+      "probabilities": {
+        "CBB": 0.0069,
+        "CBSD": 0.0234,
+        "CGM": 0.1171,
+        "CMD": 0.8288,
+        "Healthy": 0.0238
+      }
+    },
+    {
+      "image_id": "635122883.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.4248,
+      "probabilities": {
+        "CBB": 0.075,
+        "CBSD": 0.0436,
+        "CGM": 0.3478,
+        "CMD": 0.4248,
+        "Healthy": 0.1089
+      }
+    },
+    {
+      "image_id": "662372109.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5585,
+      "probabilities": {
+        "CBB": 0.0915,
+        "CBSD": 0.0195,
+        "CGM": 0.2249,
+        "CMD": 0.5585,
+        "Healthy": 0.1056
+      }
+    },
+    {
+      "image_id": "674941646.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.5601,
+      "probabilities": {
+        "CBB": 0.0408,
+        "CBSD": 0.1203,
+        "CGM": 0.1702,
+        "CMD": 0.5601,
+        "Healthy": 0.1085
+      }
+    },
+    {
+      "image_id": "685199622.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 0,
+      "pred_code": "CBB",
+      "is_correct": false,
+      "confidence": 0.4951,
+      "probabilities": {
+        "CBB": 0.4951,
+        "CBSD": 0.049,
+        "CGM": 0.0313,
+        "CMD": 0.1167,
+        "Healthy": 0.3078
+      }
+    },
+    {
+      "image_id": "716052378.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.9786,
+      "probabilities": {
+        "CBB": 0.0005,
+        "CBSD": 0.0043,
+        "CGM": 0.0083,
+        "CMD": 0.9786,
+        "Healthy": 0.0082
+      }
+    },
+    {
+      "image_id": "716467114.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.3354,
+      "probabilities": {
+        "CBB": 0.1982,
+        "CBSD": 0.0845,
+        "CGM": 0.1533,
+        "CMD": 0.3354,
+        "Healthy": 0.2286
+      }
+    },
+    {
+      "image_id": "734530855.jpg",
+      "true_label": 2,
+      "true_code": "CGM",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": false,
+      "confidence": 0.6705,
+      "probabilities": {
+        "CBB": 0.0155,
+        "CBSD": 0.0575,
+        "CGM": 0.1957,
+        "CMD": 0.6705,
+        "Healthy": 0.0608
+      }
+    },
+    {
+      "image_id": "735529446.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7539,
+      "probabilities": {
+        "CBB": 0.0166,
+        "CBSD": 0.0168,
+        "CGM": 0.1741,
+        "CMD": 0.7539,
+        "Healthy": 0.0386
+      }
+    },
+    {
+      "image_id": "752382759.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.4937,
+      "probabilities": {
+        "CBB": 0.0893,
+        "CBSD": 0.0862,
+        "CGM": 0.1451,
+        "CMD": 0.4937,
+        "Healthy": 0.1858
+      }
+    },
+    {
+      "image_id": "806456552.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.8915,
+      "probabilities": {
+        "CBB": 0.0073,
+        "CBSD": 0.0071,
+        "CGM": 0.0538,
+        "CMD": 0.8915,
+        "Healthy": 0.0404
+      }
+    },
+    {
+      "image_id": "848914861.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 4,
+      "pred_code": "Healthy",
+      "is_correct": false,
+      "confidence": 0.3058,
+      "probabilities": {
+        "CBB": 0.2535,
+        "CBSD": 0.2994,
+        "CGM": 0.0626,
+        "CMD": 0.0787,
+        "Healthy": 0.3058
+      }
+    },
+    {
+      "image_id": "906750363.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.4789,
+      "probabilities": {
+        "CBB": 0.0213,
+        "CBSD": 0.0344,
+        "CGM": 0.4181,
+        "CMD": 0.4789,
+        "Healthy": 0.0474
+      }
+    },
+    {
+      "image_id": "927454705.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.784,
+      "probabilities": {
+        "CBB": 0.0312,
+        "CBSD": 0.0057,
+        "CGM": 0.0922,
+        "CMD": 0.784,
+        "Healthy": 0.0869
+      }
+    },
+    {
+      "image_id": "967603965.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.426,
+      "probabilities": {
+        "CBB": 0.103,
+        "CBSD": 0.1638,
+        "CGM": 0.1178,
+        "CMD": 0.426,
+        "Healthy": 0.1893
+      }
+    },
+    {
+      "image_id": "971713914.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.5875,
+      "probabilities": {
+        "CBB": 0.0508,
+        "CBSD": 0.0272,
+        "CGM": 0.2649,
+        "CMD": 0.5875,
+        "Healthy": 0.0696
+      }
+    },
+    {
+      "image_id": "981946821.jpg",
+      "true_label": 3,
+      "true_code": "CMD",
+      "pred_label": 3,
+      "pred_code": "CMD",
+      "is_correct": true,
+      "confidence": 0.7289,
+      "probabilities": {
+        "CBB": 0.0122,
+        "CBSD": 0.0143,
+        "CGM": 0.2138,
+        "CMD": 0.7289,
+        "Healthy": 0.0308
+      }
+    }
+  ]
+}

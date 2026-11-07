@@ -1,0 +1,87 @@
+{
+  "total_validated_images": 750,
+  "unique_dimensions": [
+    {
+      "width": 800,
+      "height": 600,
+      "count": 750
+    }
+  ],
+  "aspect_ratio_mean": 1.3333,
+  "overall_brightness_mean": 115.16,
+  "overall_brightness_std": 19.04,
+  "overall_sharpness_median": 1726.34,
+  "images_with_quality_warnings": 0,
+  "per_class_statistics": {
+    "CBB": {
+      "count": 80,
+      "percentage": 10.67,
+      "mean_brightness": 107.04,
+      "mean_contrast": 51.3,
+      "mean_sharpness": 1669.23,
+      "mean_green_ratio": 0.7664,
+      "mean_rgb": [
+        102.65,
+        116.88,
+        67.91
+      ]
+    },
+    "CBSD": {
+      "count": 80,
+      "percentage": 10.67,
+      "mean_brightness": 115.61,
+      "mean_contrast": 46.83,
+      "mean_sharpness": 1178.76,
+      "mean_green_ratio": 0.7789,
+      "mean_rgb": [
+        106.79,
+        128.3,
+        73.42
+      ]
+    },
+    "CGM": {
+      "count": 84,
+      "percentage": 11.2,
+      "mean_brightness": 121.19,
+      "mean_contrast": 47.21,
+      "mean_sharpness": 1754.88,
+      "mean_green_ratio": 0.7458,
+      "mean_rgb": [
+        116.98,
+        129.15,
+        91.28
+      ]
+    },
+    "CMD": {
+      "count": 416,
+      "percentage": 55.47,
+      "mean_brightness": 116.19,
+      "mean_contrast": 49.52,
+      "mean_sharpness": 2106.9,
+      "mean_green_ratio": 0.7939,
+      "mean_rgb": [
+        109.57,
+        126.73,
+        79.29
+      ]
+    },
+    "Healthy": {
+      "count": 90,
+      "percentage": 12.0,
+      "mean_brightness": 111.55,
+      "mean_contrast": 50.77,
+      "mean_sharpness": 1684.66,
+      "mean_green_ratio": 0.7497,
+      "mean_rgb": [
+        105.63,
+        121.23,
+        77.22
+      ]
+    }
+  },
+  "generated_figures": [
+    "artifacts/figures/class_distribution.png",
+    "artifacts/figures/image_quality_distributions.png",
+    "artifacts/figures/representative_samples_grid.png"
+  ]
+}
